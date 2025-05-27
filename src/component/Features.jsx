@@ -1,18 +1,22 @@
+import featuresimg1 from '../assets/features-img1.png';
+import featuresimg2 from '../assets/features-img2.png';
+import featuresimg3 from '../assets/features-img3.png';
+import overviewimg from '../assets/overview.png';
 
 export default function Features() {
     const featuresData = [
         {
-            img: 'features-img1.png',
+            img: featuresimg1,
             title: 'Feature Content',
             date: 'May 5, 2025',
         },
         {
-            img: 'features-img2.png',
+            img: featuresimg2,
             title: 'Feature Content',
             date: 'May 5, 2025',
         },
         {
-            img: 'features-img3.png',
+            img: featuresimg3,
             title: 'Feature Content',
             date: 'May 5, 2025',
         },
@@ -28,8 +32,9 @@ export default function Features() {
             <h2 className="text-lg font-bold text-white mb-5">Overview</h2>
             <div className="rounded-md overflow-hidden aspect-video max-md:aspect-[16/10]">
               <img
-                src="overview.png"
+                src={overviewimg}
                 alt="Product 1"
+                loading='lazy'
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -45,6 +50,7 @@ export default function Features() {
                 <img
                   src={item.img}
                   alt={item.title}
+                  loading='lazy'
                   className="w-full h-auto object-cover rounded-md"
                 />
                 <div className="mt-2 flex-col items-start">

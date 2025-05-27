@@ -1,11 +1,14 @@
+import trydemoimg from '../assets/trydemo-img.png';
+
 export default function TryDemo() {
     return(
         <section className="trydemo mt-20 w-full transition-all duration-300">
             <div className="trydemo-content-container w-full bg-black max-w-7xl mx-auto">
                 <div className="trydemo-content relative aspect-[16/7] max-md:aspect-[16/10] w-full rounded-md overflow-hidden">
                     <img 
-                        src="trydemo-img.png" 
+                        src={trydemoimg}
                         alt="try demo"
+                        loading='lazy'
                         className="absolute top-0 left-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 flex flex-col justify-center items-center gap-5 p-6 text-white">

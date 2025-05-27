@@ -1,25 +1,30 @@
+import newsimage1 from '../assets/news-img1.png';
+import newsimage2 from '../assets/news-img2.png';
+import newsimage3 from '../assets/news-img3.png';
+import newsimage4 from '../assets/news-img4.png';
+
 export default function News() {
     const newsData = [
         {
-            img: 'news-img1.png',
+            img: newsimage1,
             title: 'New Updates',
             tag: 'Product',
             date: 'May 21, 2025',
         },
         {
-            img: 'news-img2.png',
+            img: newsimage2,
             title: 'New Updates',
             tag: 'Company',
             date: 'May 7, 2025',
         },
         {
-            img: 'news-img3.png',
+            img: newsimage3,
             title: 'New Updates',
             tag: 'Product',
             date: 'May 7, 2025',
         },
         {
-            img: 'news-img4.png',
+            img: newsimage4,
             title: 'New Updates',
             tag: 'Company',
             date: 'May 5, 2025',
@@ -37,7 +42,7 @@ export default function News() {
                     {newsData.map((item, index) => (
                         <div key={index} className="flex gap-4">
                             <div className="w-28 h-28 flex-shrink-0 rounded-md overflow-hidden">
-                                <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                                <img src={item.img} alt={item.title} loading='lazy' className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="text-white font-semibold text-md">{item.title}</h3>

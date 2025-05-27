@@ -1,3 +1,6 @@
+import productimg1 from '../assets/products-img1.png';
+import productimg2 from '../assets/products-img2.png';
+
 export default function Products() {
     return(
         <section className="products mt-20 h-auto transition-all duration-300">
@@ -5,10 +8,11 @@ export default function Products() {
                 <h2 className="mb-5 font-bold text-lg max-md:text-2xl">AI Agents</h2>
                 <div className="products-content grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="products-content-item">
-                        <div className="relative aspect-[16/10] rounded-md overflow-hidden border border-white/10 hover:border-white transition duration-300">
+                        <div className="relative aspect-[16/10] rounded-md overflow-hidden">
                             <img
-                                src="products-img1.png"
+                                src={productimg1}
                                 alt="Product 1"
+                                loading='lazy'
                                 className="products-image1 absolute top-0 left-0 w-full h-full object-cover">   
                             </img>
                         </div>
@@ -18,8 +22,9 @@ export default function Products() {
                     <div className="products-content-item">
                         <div className="relative aspect-[16/10] rounded-md overflow-hidden">
                             <img
-                                src="products-img2.png"
+                                src={productimg2}
                                 alt="Product 2"
+                                loading='lazy'
                                 className="products-image2 absolute top-0 left-0 w-full h-full object-cover">   
                             </img>
                         </div>

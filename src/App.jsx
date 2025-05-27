@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./component/Header"
 import Navbar from "./component/Navbar"
 import Hero from "./component/Hero";
@@ -10,7 +10,22 @@ import content from "./data/content.json";
 
 
 function App() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(window.innerWidth >= 768);
+
+  useEffect(() => {
+    // Optional: if user resizes window, you might want to close navbar
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true); // or keep current if you want it unchanged on resize
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleNavbar = () => setIsOpen(prev => !prev)
 

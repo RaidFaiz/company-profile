@@ -1,3 +1,5 @@
+import heroimg from '../assets/hero-img.png';
+
 export default function Hero({hero}) {
     return(
         <section className="hero mt-20 w-full transition-all duration-300">
@@ -5,8 +7,9 @@ export default function Hero({hero}) {
                 <h1 className="hero-title uppercase text-4xl max-md:text-3xl text-left font-bold mb-5">{hero.title}</h1>
                 <div className="hero-content relative aspect-[16/7] max-md:aspect-[16/10] w-full rounded-md overflow-hidden">
                     <img 
-                        src="hero-img.png" 
-                        alt=""
+                        src={heroimg}
+                        alt="hero section"
+                        loading='lazy'
                         className="absolute top-0 left-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
