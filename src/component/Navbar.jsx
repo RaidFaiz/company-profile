@@ -1,16 +1,24 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 export default function Navbar({ isOpen }) {
-    useEffect(() => {
-        if (isOpen && window.innerWidth < 768) { // only lock scroll on small screens
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+    useLayoutEffect(() => {
+        const lockScroll = () => {
+            const isMobile = window.innerWidth < 768;
+            if (isOpen && isMobile) {
+            document.body.classList.add('no-scroll');
+            } else {
+            document.body.classList.remove('no-scroll');
+            }
+        };
 
-        // Optional cleanup on unmount
+        lockScroll();
+
+        // Optional: listen to window resize to recheck isMobile condition
+        window.addEventListener('resize', lockScroll);
+
         return () => {
             document.body.style.overflow = 'auto';
+            window.removeEventListener('resize', lockScroll);
         };
     }, [isOpen]);
 
