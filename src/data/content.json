@@ -1,0 +1,105 @@
+{
+  "company": "VOUNDYER",
+  "navigation": [
+    { "name": "Home", "url": "#" },
+    { "name": "Products", "url": "#" },
+    { "name": "News", "url": "#" },
+    { "name": "About", "url": "#" },
+    { "name": "Demo", "url": "#" }
+  ],
+  "hero": {
+    "title": "Voundyer",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis libero tempor, auctor massa at, posuere arcu.",
+    "buttonText": "Get Started"
+  },
+  "aiAgent": {
+    "title": "AI Agent",
+    "products": [
+      {
+        "title": "Title of the products",
+        "description": "Descriptions 2 lines Descriptions 2 lines\nDescriptions 2 lines",
+        "image": "placeholder-1.jpg"
+      },
+      {
+        "title": "Title of the products",
+        "description": "Descriptions 2 lines Descriptions 2 lines\nDescriptions 2 lines",
+        "image": "placeholder-2.jpg"
+      }
+    ]
+  },
+  "overview": {
+    "title": "Overview",
+    "videoPlaceholder": "VIDEO"
+  },
+  "features": {
+    "title": "Features",
+    "tools": [
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      },
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      },
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      },
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      },
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      },
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      },
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      },
+      {
+        "name": "Tool Name",
+        "description": "Lorem Ipsum is simply dummy text of the printing"
+      }
+    ]
+  },
+  "latestNews": {
+    "title": "Latest news",
+    "news": [
+      {
+        "title": "New Update",
+        "category": "Category",
+        "date": "dd/mm/yyyy",
+        "image": "news-1.jpg"
+      },
+      {
+        "title": "New Update",
+        "category": "Category",
+        "date": "dd/mm/yyyy",
+        "image": "news-2.jpg"
+      },
+      {
+        "title": "New Update",
+        "category": "Category",
+        "date": "dd/mm/yyyy",
+        "image": "news-3.jpg"
+      },
+      {
+        "title": "New Update",
+        "category": "Category",
+        "date": "dd/mm/yyyy",
+        "image": "news-4.jpg"
+      }
+    ]
+  },
+  "tryProduct": {
+    "title": "Try Our Product",
+    "buttonText": "Demo",
+    "image": "product-demo.jpg"
+  }
+}
