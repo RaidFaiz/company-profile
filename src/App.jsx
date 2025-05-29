@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./component/Header"
 import Navbar from "./component/Navbar"
-import Hero from "./component/Hero";
-import Products from "./component/Products";
-import News from "./component/news";
-import TryDemo from "./component/TryDemo";
-import Features from "./component/Features";
-import content from "./data/content.json";
+import Home from "./pages/Home";
+import Demo from "./pages/Demo";
+
 
 
 function App() {
@@ -30,21 +29,22 @@ function App() {
   const toggleNavbar = () => setIsOpen(prev => !prev)
 
   return (
+
     <div className="App">
       <Header isOpen={isOpen} toggleNavbar={toggleNavbar} />
-      
+        
       <div className="main-container">
-        <Navbar isOpen={isOpen}/>
-
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen}/>
+            
         <main className={`main-content p-5 transition-all duration-300 ${isOpen ? 'ml-[200px]' : 'ml-0'}`}>
-          <Hero hero={content.hero}/>
-          <Products />
-          <Features/>
-          <News/>
-          <TryDemo/>
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/demo" element={<Demo />}/>
+          </Routes>
         </main>
       </div>
     </div>
+
   )
 }
 

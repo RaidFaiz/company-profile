@@ -1,12 +1,24 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-export default function Navbar({ isOpen }) {
+export default function Navbar({ isOpen, setIsOpen }) {
+    const location = useLocation();
+
+    useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile && typeof setIsOpen === 'function') {
+        setIsOpen(false);
+    }
+    }, [location.pathname]);
+
     useLayoutEffect(() => {
         const lockScroll = () => {
             const isMobile = window.innerWidth < 768;
             if (isOpen && isMobile) {
+            document.documentElement.classList.add('no-scroll');    
             document.body.classList.add('no-scroll');
             } else {
+            document.documentElement.classList.remove('no-scroll');
             document.body.classList.remove('no-scroll');
             }
         };
@@ -33,11 +45,11 @@ export default function Navbar({ isOpen }) {
             `}                   
             >
                 <div className="nav-container md:mt-50 flex flex-col justify-start gap-1 max-md:items-center max-md:gap-5 max-md:h-screen max-md:justify-center">
-                    <a href="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Home</a>
-                    <a href="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Products</a>
-                    <a href="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">News</a>
-                    <a href="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">About</a>
-                    <a href="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Demo</a>
+                    <Link to="/" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Home</Link>
+                    <Link to="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">News</Link>
+                    <Link to="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Products</Link>
+                    <Link to="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">About</Link>
+                    <Link to="/demo" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Demo</Link>
                 </div>                       
         </nav>
     )
