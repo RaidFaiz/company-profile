@@ -25,7 +25,6 @@ export default function Navbar({ isOpen, setIsOpen }) {
 
         lockScroll();
 
-        // Optional: listen to window resize to recheck isMobile condition
         window.addEventListener('resize', lockScroll);
 
         return () => {

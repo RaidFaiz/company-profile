@@ -1,8 +1,13 @@
+import IntroductionDemo from "../component/IntroductionDemo";
+import FeaturesDemo from "../component/FeaturesDemo";
+import TryDemoPage from "../component/TryDemoPage";
+
 export default function Demo() {
   return (
-    <div className="text-white h-screen flex items-center justify-center">
-      <h1>About Page</h1>
-
-    </div>
+    <> 
+      <IntroductionDemo />
+      <FeaturesDemo />
+      <TryDemoPage/>
+    </>
   )
 }
