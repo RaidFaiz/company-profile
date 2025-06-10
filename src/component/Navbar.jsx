@@ -45,7 +45,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
             >
                 <div className="nav-container md:mt-50 flex flex-col justify-start gap-1 max-md:items-center max-md:gap-5 max-md:h-screen max-md:justify-center">
                     <Link to="/" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Home</Link>
-                    <Link to="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">News</Link>
+                    <Link to="/news" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">News</Link>
                     <Link to="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Products</Link>
                     <Link to="#" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">About</Link>
                     <Link to="/demo" className="hover:bg-zinc-900 transition-all duration-200 p-2 rounded-md">Demo</Link>

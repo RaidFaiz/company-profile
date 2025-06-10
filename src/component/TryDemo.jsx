@@ -4,7 +4,7 @@ export default function TryDemo() {
     return(
         <section className="trydemo mt-20 w-full transition-all duration-300">
             <div className="trydemo-content-container w-full bg-black max-w-7xl mx-auto">
-                <div className="trydemo-content relative aspect-[16/7] max-md:aspect-[16/10] w-full rounded-md overflow-hidden">
+                <div className="trydemo-content relative aspect-[12/4] max-md:aspect-[16/10] w-full rounded-md overflow-hidden">
                     <img 
                         src={trydemoimg}
                         alt="try demo"

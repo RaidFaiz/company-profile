@@ -5,6 +5,7 @@ import Header from "./component/Header"
 import Navbar from "./component/Navbar"
 import Home from "./pages/Home";
 import Demo from "./pages/Demo";
+import News from "./pages/News";
 
 
 
@@ -40,6 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/demo" element={<Demo />}/>
+            <Route path="/news" element={<News />}/>
           </Routes>
         </main>
       </div>

@@ -34,8 +34,8 @@ export default function Products() {
                             </div>
                             <div className="mt-2 flex-col items-start">
                                 <h3 className="products-title text-md text-left font-bold mt-5">{item.title}</h3>
-                                <p className="text-white text-sm text-left mt-1 line-clamp-2">{item.description}</p>
-                                <p className="text-white/60 text-sm mt-1">
+                                <p className="text-white/70 text-sm text-left mt-1 line-clamp-2">{item.description}</p>
+                                <p className="text-white/45 text-sm mt-1">
                                     <span className="font-medium">{item.date}</span>
                                 </p> 
                             </div>
