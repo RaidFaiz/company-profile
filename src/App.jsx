@@ -6,8 +6,7 @@ import Navbar from "./component/Navbar"
 import Home from "./pages/Home";
 import Demo from "./pages/Demo";
 import News from "./pages/News";
-
-
+import About from "./pages/About";
 
 function App() {
   const [isOpen, setIsOpen] = useState(window.innerWidth >= 768);
@@ -42,6 +41,7 @@ function App() {
             <Route path="/" element={<Home />}/>
             <Route path="/demo" element={<Demo />}/>
             <Route path="/news" element={<News />}/>
+            <Route path="/about" element={<About />}/>
           </Routes>
         </main>
       </div>

@@ -29,7 +29,7 @@ export default function Features() {
         {/* Overview (Sticky on desktop) */}
         <div className="overview w-full md:w-2/3">
           <div className="md:sticky md:top-20">
-            <h2 className="text-lg font-bold text-white mb-5">Overview</h2>
+            <h2 className="mb-5 font-bold text-xl">Overview</h2>
             <div className="rounded-md overflow-hidden aspect-video max-md:aspect-[16/10]">
               <img
                 src={overviewimg}
@@ -43,7 +43,7 @@ export default function Features() {
 
         {/* Features (Scrolls independently on desktop) */}
         <div className="features w-full md:w-1/3 mt-10 md:mt-0">
-          <h2 className="text-lg font-bold text-white mb-5">Features</h2>
+          <h2 className="mb-5 font-bold text-xl">Features</h2>
           <div className="grid grid-cols-1 gap-5">
             {featuresData.map((item, index) => (
               <div key={index} className="rounded-md overflow-hidden">
@@ -54,7 +54,7 @@ export default function Features() {
                   className="w-full h-auto object-cover rounded-md"
                 />
                 <div className="mt-2 flex-col items-start">
-                    <h3 className="features-content-title text-white font-semibold text-md">{item.title}</h3>
+                    <h3 className="features-content-title text-white font-bold text-md">{item.title}</h3>
                     <p className="text-white/60 text-sm mt-1">
                         <span className="font-medium">{item.date}</span>
                     </p>                   

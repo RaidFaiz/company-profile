@@ -35,7 +35,7 @@ export default function NewsHome() {
         <section className="news mt-20 h-auto">
             <div className="news-container max-w-7xl mx-auto">
                 <div className="flex justify-between items-center mb-5">
-                    <h2 className="text-lg font-bold text-white">Latest News</h2>
+                    <h2 className="font-bold text-xl">Latest News</h2>
                     <a href="#" className="text-sm text-white/60 hover:text-white transition-all duration-200">View all</a>
                 </div>
                 <div className="news-content grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -48,7 +48,7 @@ export default function NewsHome() {
                                 <h3 className="text-white font-semibold text-md">{item.title}</h3>
                                 <div className='flex justify-start flex-wrap items-center gap-2 mt-1'>
                                     <div className="news-category px-3 py-1 border w-max rounded-3xl flex items-center text-white/60 text-sm mt-1">
-                                        <span className='text-xs'>Product</span>
+                                        <span className='text-xs'>{item.tag}</span>
                                     </div>
                                     <span className="text-white/60 text-sm mt-1">
                                         {item.date}

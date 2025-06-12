@@ -20,7 +20,7 @@ export default function Products() {
     return(
         <section className="products mt-20 h-auto transition-all duration-300">
             <div className="products-content-container w-full max-w-7xl mx-auto bg-black transition-all duration-300">
-                <h2 className="mb-5 font-bold text-lg max-md:text-2xl">AI Agents</h2>
+                <h2 className="mb-5 font-bold text-xl">AI Agents</h2>
                 <div className="products-content grid grid-cols-1 md:grid-cols-2 gap-5">
                     {productsData.map((item, index) => (
                         <div key={index} className="products-content-item">
@@ -33,8 +33,8 @@ export default function Products() {
                                 </img>
                             </div>
                             <div className="mt-2 flex-col items-start">
-                                <h3 className="products-title text-md text-left font-bold mt-5">{item.title}</h3>
-                                <p className="text-white/70 text-sm text-left mt-1 line-clamp-2">{item.description}</p>
+                                <h3 className="products-title text-lg text-left font-bold mt-5">{item.title}</h3>
+                                <p className="text-white/70 text-md text-left mt-1 line-clamp-2">{item.description}</p>
                                 <p className="text-white/45 text-sm mt-1">
                                     <span className="font-medium">{item.date}</span>
                                 </p> 

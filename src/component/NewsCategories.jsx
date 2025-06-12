@@ -4,7 +4,7 @@ import productimg1 from '../assets/features-img1.png';
 import productimg2 from '../assets/features-img2.png';
 import productimg3 from '../assets/features-img3.png';
 
-const categories = ["all", "Technology", "Business", "Security", "Case Study"];
+const categories = ["All", "Technology", "Business", "Security", "Case Study"];
 
 export default function NewsCategories() {
 
@@ -61,11 +61,11 @@ export default function NewsCategories() {
 
 const initialCount = 4;
 
-const [selectedCategory, setSelectedCategory] = useState("all")
+const [selectedCategory, setSelectedCategory] = useState("All")
 const [visibleCount, setVisibleCount] = useState(initialCount)
 
 const filteredArticles = 
-    selectedCategory === "all" 
+    selectedCategory === "All" 
     ? articles 
     : articles.filter((article) => article.category === selectedCategory)
 
@@ -116,8 +116,8 @@ return (
                             <div className="news-category px-2 py-1 border w-max rounded-3xl flex items-center text-stone-300">
                                 <span className='text-xs'>{article.category}</span>
                             </div>
-                            <h3 className="news-categories-title text-md text-left font-bold mt-2">{article.title}</h3>
-                            <p className="text-white/70 max-w-4xl text-md text-sm text-left mt-1 line-clamp-2">{article.description}</p>
+                            <h3 className="news-categories-title text-lg text-left font-bold mt-2">{article.title}</h3>
+                            <p className="text-white/70 max-w-4xl text-md text-left mt-1">{article.description}</p>
                             <p className="text-white/45 text-sm mt-1">
                                 <span className="font-medium">{article.date}</span>
                             </p> 

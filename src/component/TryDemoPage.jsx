@@ -2,7 +2,7 @@ import trydemoimg from '../assets/trydemo-img.png';
 
 export default function TryDemoPage() {
     return(
-        <section className="trydemo mt-20 w-full transition-all duration-300">
+        <section className="trydemo mt-15 w-full transition-all duration-300">
             <div className="trydemo-content-container w-full bg-black max-w-7xl mx-auto">
                 <h2 className="trydemo-content-span text-center text-4xl max-md:text-2xl mb-5">Try Our Product</h2>
                 <div className="trydemo-content relative aspect-[12/4] max-md:aspect-[16/10] w-full rounded-md overflow-hidden">
